@@ -16,7 +16,7 @@ passed, unless otherwise stated.
 - [ ] [**PA3**](https://github.com/Brant-Skywalker/CS143/tree/master/PA3)
 - [ ] [**PA4**](https://github.com/Brant-Skywalker/CS143/tree/master/PA4)
 - [ ] [**PA5**](https://github.com/Brant-Skywalker/CS143/tree/master/PA5)
-- [ ] ***Extra Credit***
+- [ ] ~~***Extra Credit***~~
 
 ### Update History
 
