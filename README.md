@@ -6,8 +6,8 @@ email me at siyuanq4@illinois.edu.
 
 ### Important Information
 
-Unfortunately, I'm not a Stanford student! :wink: Lab assignments will be marked completed only after the *entire* test scripts have been
-passed, unless stated otherwise.
+Unfortunately, I'm not a Stanford student! :wink: Assignments are marked completed only after the *entire* test scripts have been
+passed, unless otherwise stated.
 
 ### Current Progress
 
