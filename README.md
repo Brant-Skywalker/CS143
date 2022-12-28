@@ -12,7 +12,7 @@ passed, unless otherwise stated.
 ### Current Progress
 
 - [x] [**PA1**](https://github.com/Brant-Skywalker/CS143/tree/master/PA1)
-- [ ] [***PA2***](https://github.com/Brant-Skywalker/CS143/tree/master/PA2)  :point_left:
+- [ ] [**PA2**](https://github.com/Brant-Skywalker/CS143/tree/master/PA2)  :point_left:
 - [ ] [**PA3**](https://github.com/Brant-Skywalker/CS143/tree/master/PA3)
 - [ ] [**PA4**](https://github.com/Brant-Skywalker/CS143/tree/master/PA4)
 - [ ] [**PA5**](https://github.com/Brant-Skywalker/CS143/tree/master/PA5)
