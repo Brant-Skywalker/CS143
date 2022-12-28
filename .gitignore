@@ -2,6 +2,7 @@
 *.d
 
 # Compiled Object files
+*.s
 *.slo
 *.lo
 *.o
@@ -33,4 +34,4 @@
 
 # Miscellaneous
 grading/
-*.s
+.idea/
