@@ -55,7 +55,7 @@ static int comment_lvl;
 INTEGER         [[:digit:]]+
 TYPEID          [[:upper:]][[:alnum:]_]*
 OBJECTID        [[:lower:]][[:alnum:]_]*
-WHITESPACE      [ \f\r\t\v]
+WHITESPACE      [ \f\r\t\v]+
 DARROW          =>
 LE              <=
 ASSIGN          <-
@@ -186,7 +186,7 @@ f(?i:alse) {
   *  Whitespaces.
   */
 \n              { curr_lineno++; }
-{WHITESPACE}+   /* Do nothing. */
+{WHITESPACE}    /* Do nothing. */
 
  /*
   *  Integer constants.
