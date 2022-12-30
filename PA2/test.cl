@@ -95,7 +95,7 @@ class Main {
 
             testStr1 <- "testtest
             ";
-            testStr2 <- "\ttest\b\btest\ntest\ftest\ctest\0\c\a\s\rtest";
+            testStr2 <- "\ttest\b\btest\ntest\ftest\ctest\0\c\a\s\rtest\1\2\033\3\4\x33\x44";
             tooLongString <- "c7aQcQGLT8dcok2EBWP1NnPCSb3BQZZaYYWEWKNdVWJLDtXUdqcvhzVrBJVFVkMPUmQwCVT5LfYG4DwL5GI6vtDZNQghrHcrMTd1dhCZE1TZidAnIt44IvbZnXoCZ1gSpPLjuIbBVcx4Ya95ndW48dwDJfBnlm0igTW3MZja7u7GbG1klG3faREGQf7LhCNUkJWYWCpcNnhJeOublQHZZtyZZEFFwptKR53cJ8br8g0hB8aJtq6T3ifeyPXaNHORJKP4aZoO78NbIe2JhBVa4xu7wpuUg4KmOGcDrxM0JZpOxATSMjRVgKmcDSVkrYuskV1WANcfYZa6is1QCLtudq0zZZRVKJ4nQ4m3x8tQIlmdHCWLIyPlV1wCQZpHW4X4d6TKPAiiUX0A53ZByJZldqU6La7vWl4XXeUk75qwO6lcF8aQNPtLqo8OMdxWqbXTi42MyWMcNno99bJei6rpnEW52kjfG3YnsokqSpVYgki3KlygPoSpylO9Gj2ErSfrmidGsmRMfJEuKlr3MPBw8pqshZXLP32bEwZQMf9por3EqhCuRNdHIqI8XegNMVEKO8IOYf92j9YhjM49BK2kdBm9dj3GKkn4vCcVmVlsjArMrO1iBHkGnBkal2G7ZnbiVMo2xS5YJ4srDEfWoh4jMkMZDq8EBqn1ONI2CtlUHGxyyMgVV1Fd7WkRc7FyVUOqOq5q57dQuC2PTQP7YEYtbRm85VQlNIOqMC4robyejYVbubCV8IZEvIEnbNsA3ddG2C2THIQsu9byuiFvnzF1Ve9Jppz5CloQg454HfVGoFEoq3Kjot1wyUsC7fTkpSstntb8vuQxYehzGqkvjY41aEOOHY61jpQe3JACYEqBL3XuHBo5Ht5r532NoHaKsUhrPDl3g7qLO3yy8S2hpbxrhP7FmcbQ3ynuqyrrbpPh5037WQa5CNbzx8eNClz58HRwYaNzaFS5ViuRwakJgrY7b0Vfxqa8KRcIfLVO0P2CQrdmIFS3afPZmlHRN6SySNAzs";
 
             cells <- (new CellularAutomaton).init("         X         ");
