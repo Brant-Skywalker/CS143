@@ -208,6 +208,11 @@ f(?i:alse) {
   *  NOTE: If a literal EOF exists in a string literal, a trailing `"` cannot exist.
   */
 \"[^"\\\n]*\" {
+    if (MAX_STR_CONST <= yyleng - 2) {
+        yylval.error_msg = "String constant too long";
+        BEGIN(INITIAL);
+        return ERROR;
+    }
     yylval.symbol = stringtable.add_string(yytext + 1, yyleng - 2);
     return STR_CONST;
 }
@@ -216,7 +221,7 @@ f(?i:alse) {
   *  Handle escaped characters and errors.
   */
 \"[^"\\\n]* {
-    string_buf += std::string(yytext + 1, yyleng - 1);
+    string_buf = std::string(yytext + 1, yyleng - 1);
     BEGIN(STRING);
 }
 
@@ -229,7 +234,7 @@ f(?i:alse) {
     \\.     { string_buf += yytext[1]; }  // Remove the backslash.
 
     \" {
-        if (MAX_STR_CONST < string_buf.length()) {
+        if (MAX_STR_CONST <= string_buf.length()) {
             yylval.error_msg = "String constant too long";
             BEGIN(INITIAL);
             return ERROR;
