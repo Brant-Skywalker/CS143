@@ -34,4 +34,10 @@
 
 # Miscellaneous
 grading/
+gold
+out
 .idea/
+
+# For PA2
+lexer
+cool-lex.cc
