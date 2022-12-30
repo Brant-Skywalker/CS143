@@ -1,3 +1,7 @@
+-- Test comments. (*
+
+(* lvl 1 [ ((( * * ))) ] (* lvl 2 (* lvl 3 *) lvl 2 *) lvl 1 *)
+
 (* models one-dimensional cellular automaton on a circle of finite radius
    arrays are faked as Strings,
    X's respresent live cells, dots represent dead cells,
@@ -50,7 +54,7 @@ class CellularAutomaton inherits IO {
             + if cell_left_neighbor(position) = "X" then 1 else 0 fi
             + if cell_right_neighbor(position) = "X" then 1 else 0 fi
             = 1)
-        then
+        then  -- Test comment.
             "X"
         else
             '.'
@@ -77,9 +81,15 @@ class CellularAutomaton inherits IO {
 
 class Main {
     cells : CellularAutomaton;
+    testBool : Bool;
+    testStr : String;
    
     main() : SELF_TYPE {
         {
+            testBool <- tRuE;
+            testBool <- fAlSe;
+            testStr <- "testtest
+            ";
             cells <- (new CellularAutomaton).init("         X         ");
             cells.print();
             (let countdown : Int <- 20 in
@@ -95,3 +105,5 @@ class Main {
         }
     };
 };
+
+"EOF IN STRING
