@@ -84,8 +84,8 @@ ASSIGN          <-
 }
 
 <COMMENT>[^*(\n]*       /* Ignore anything that is not a `*`, `(`. */
-<COMMENT>"*"+[^*)\n]*   /* Ignore "*" that is not followed by `)`s. */
-<COMMENT>"("+[^*(\n]*   /* Ignore "(" that is not followed by `*`s. */
+<COMMENT>"*"[^*)\n]*    /* Ignore "*" that is not followed by `)`s. */
+<COMMENT>"("[^*(\n]*    /* Ignore "(" that is not followed by `*`s. */
 <COMMENT>\n             { curr_lineno++; }
 
  /*
@@ -100,7 +100,7 @@ ASSIGN          <-
  /*
   * Report `*)`s outside a comment.
   */
-")*" {
+"*)" {
     yylval.error_msg = "Unmatched *)";
     return ERROR;
 }
@@ -198,7 +198,7 @@ f(?i:alse) {
 
  /*
   *  String constants (C syntax)
-  *  Escape sequence \c is accepted for all characters c. Except for 
+  *  Escape sequence \c is accepted for all characters c. Except for
   *  \n \t \b \f, the result is c.
   *
   */
@@ -207,7 +207,7 @@ f(?i:alse) {
   *  Optimization for strings without escaped characters.
   *  NOTE: If a literal EOF exists in a string literal, a trailing `"` cannot exist.
   */
-\"[^"\\\n]*\" {
+\"[^"\\\n\0]*\" {
     if (MAX_STR_CONST <= yyleng - 2) {
         yylval.error_msg = "String constant too long";
         BEGIN(INITIAL);
@@ -220,18 +220,17 @@ f(?i:alse) {
  /*
   *  Handle escaped characters and errors.
   */
-\"[^"\\\n]* {
+\"[^"\\\n\0]* {
     string_buf = std::string(yytext + 1, yyleng - 1);
     BEGIN(STRING);
 }
 
 <STRING>{
-    [^"\\\n]+ { string_buf.append(yytext, yyleng); }
-    \\n     { string_buf += '\n'; }
-    \\b     { string_buf += '\b'; }
-    \\t     { string_buf += '\t'; }
-    \\f     { string_buf += '\f'; }
-    \\.     { string_buf += yytext[1]; }  // Remove the backslash.
+    [^"\\\n\0]+   { string_buf.append(yytext, yyleng); }
+    \\n         { string_buf += '\n'; }
+    \\b         { string_buf += '\b'; }
+    \\t         { string_buf += '\t'; }
+    \\f         { string_buf += '\f'; }
 
     \" {
         if (MAX_STR_CONST <= string_buf.length()) {
@@ -244,6 +243,39 @@ f(?i:alse) {
         BEGIN(INITIAL);
         return STR_CONST;
     }
+
+     /*
+      *  Continue scanning the rest of the string. This is to keep the lexer
+      *  behavior identical to the gold implementation.
+      */
+    \\\n {
+        string_buf += '\n';
+        curr_lineno++;  // An escaped newline character.
+    }
+
+     /*
+      *  ignore the rest of the line up to '\n'. this is to keep the lexer
+      *  behavior identical to the gold implementation.
+      */
+    \0([^"\n])*/\n |
+    \0([^"\n])*\" {
+        yylval.error_msg = "String contains null character.";
+        BEGIN(INITIAL);
+        return ERROR;
+    }
+
+     /*
+      *  Ignore the rest of the line up to '\n'. this is to keep the lexer
+      *  behavior identical to the gold implementation.
+      */
+    \\\0([^"\n])*/\n |
+    \\\0([^"\n])*\" {
+        yylval.error_msg = "String contains escaped null character.";
+        BEGIN(INITIAL);
+        return ERROR;
+    }
+
+    \\.     { string_buf += yytext[1]; }  // Remove the backslash.
 
     \n {
         yylval.error_msg = "Unterminated string constant";
