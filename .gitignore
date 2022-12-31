@@ -33,6 +33,7 @@
 *.app
 
 # Miscellaneous
+.DS_Store
 grading/
 gold
 out
