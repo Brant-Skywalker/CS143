@@ -12,8 +12,8 @@ passed, unless otherwise stated.
 ### Current Progress
 
 - [x] [**PA1**](https://github.com/Brant-Skywalker/CS143/tree/master/PA1)
-- [ ] [**PA2**](https://github.com/Brant-Skywalker/CS143/tree/master/PA2)  :point_left:
-- [ ] [**PA3**](https://github.com/Brant-Skywalker/CS143/tree/master/PA3)
+- [x] [**PA2**](https://github.com/Brant-Skywalker/CS143/tree/master/PA2)
+- [ ] [**PA3**](https://github.com/Brant-Skywalker/CS143/tree/master/PA3)  :point_left:
 - [ ] [**PA4**](https://github.com/Brant-Skywalker/CS143/tree/master/PA4)
 - [ ] [**PA5**](https://github.com/Brant-Skywalker/CS143/tree/master/PA5)
 - [ ] ~~Extra Credit~~
@@ -23,3 +23,5 @@ passed, unless otherwise stated.
 **December 25, 2022** - Merry Christmas! Let's begin.
 
 **December 28, 2022** - Done PA1.
+
+**December 30, 2022** - Done PA2.
