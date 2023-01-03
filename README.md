@@ -9,6 +9,10 @@ email me at siyuanq4@illinois.edu.
 Unfortunately, I'm not a Stanford student! :wink: Assignments are marked completed only after the *entire* test scripts have been
 passed, unless otherwise stated.
 
+### :warning: WARNING :warning:
+
+If you are required to write your own code, e.g. you are a Stanford student currently taking this course, please do not read any of the code in this repository. This is academic integrity infringement, which is unacceptable under any circumstances.
+
 ### Current Progress
 
 - [x] [**PA1**](https://github.com/Brant-Skywalker/CS143/tree/master/PA1)
