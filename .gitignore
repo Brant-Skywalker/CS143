@@ -48,3 +48,9 @@ parser
 cool-parse.cc
 cool.output
 cool.tab.h
+
+# For PA4
+semant
+
+# For PA5
+cgen
