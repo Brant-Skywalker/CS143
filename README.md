@@ -15,11 +15,11 @@ If you are required to write your own implementation without any unauthorized as
 
 ### Current Progress
 
-- [x] [**PA1**](https://github.com/Brant-Skywalker/CS143/tree/master/PA1): COOL overview
-- [x] [**PA2**](https://github.com/Brant-Skywalker/CS143/tree/master/PA2): lexical analysis
-- [ ] [**PA3**](https://github.com/Brant-Skywalker/CS143/tree/master/PA3): parsing  :point_left:
-- [ ] [**PA4**](https://github.com/Brant-Skywalker/CS143/tree/master/PA4): semantic analysis
-- [ ] [**PA5**](https://github.com/Brant-Skywalker/CS143/tree/master/PA5): code generation
+- [x] [**PA1**](https://github.com/Brant-Skywalker/CS143/tree/master/PA1): COOL Overview
+- [x] [**PA2**](https://github.com/Brant-Skywalker/CS143/tree/master/PA2): Lexical Analysis
+- [ ] **[**PA3**](https://github.com/Brant-Skywalker/CS143/tree/master/PA3): Parsing**  :point_left:
+- [ ] [**PA4**](https://github.com/Brant-Skywalker/CS143/tree/master/PA4): Semantic Analysis
+- [ ] [**PA5**](https://github.com/Brant-Skywalker/CS143/tree/master/PA5): Code Generation
 - [ ] ~~Extra Credit~~
 
 ### Update History
