@@ -42,3 +42,9 @@ out
 # For PA2
 lexer
 cool-lex.cc
+
+# For PA3
+parser
+cool-parse.cc
+cool.output
+cool.tab.h
