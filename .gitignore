@@ -1,3 +1,7 @@
+*
+!/**/
+!*.*
+
 # Prerequisites
 *.d
 
@@ -35,22 +39,16 @@
 # Miscellaneous
 .DS_Store
 grading/
-gold
-out
 .idea/
 
 # For PA2
-lexer
 cool-lex.cc
 
 # For PA3
-parser
 cool-parse.cc
 cool.output
 cool.tab.h
 
 # For PA4
-semant
 
 # For PA5
-cgen
