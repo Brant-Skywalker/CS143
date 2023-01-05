@@ -120,22 +120,7 @@ ASSIGN          <-
  /*
   *  The single-character operators.
   */
-"."             { return (int) '.'; }
-"@"             { return (int) '@'; }
-"~"             { return (int) '~'; }
-"*"             { return (int) '*'; }
-"/"             { return (int) '/'; }
-"+"             { return (int) '+'; }
-"-"             { return (int) '-'; }
-"<"             { return (int) '<'; }
-"="             { return (int) '='; }
-"("             { return (int) '('; }
-")"             { return (int) ')'; }
-"{"             { return (int) '{'; }
-"}"             { return (int) '}'; }
-":"             { return (int) ':'; }
-";"             { return (int) ';'; }
-","             { return (int) ','; }
+[.@~*/+\-<=(){}:;,]     { return (int) yytext[0]; }
 
  /*
   * Keywords are case-insensitive except for the values true and false,
