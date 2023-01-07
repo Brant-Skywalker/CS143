@@ -137,11 +137,8 @@
     /* You will want to change the following line. */
     %type <feature> feature
     %type <features> feature_list
-    %type <expression> expr
-    %type <expressions> expr_list
-    %type <expressions> params
-    %type <expression> assign
-    %type <expression> let
+    %type <expression> expr assign let
+    %type <expressions> expr_list params
     %type <formal> formal
     %type <formals> formal_list
     %type <case_> case
