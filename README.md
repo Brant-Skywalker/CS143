@@ -17,7 +17,7 @@ If you are required to write your own implementation without any unauthorized as
 
 - [x] [**PA1**](https://github.com/Brant-Skywalker/CS143/tree/master/PA1): COOL Overview
 - [x] [**PA2**](https://github.com/Brant-Skywalker/CS143/tree/master/PA2): Lexical Analysis
-- [x] PA3**](https://github.com/Brant-Skywalker/CS143/tree/master/PA3): Parsing
+- [x] [**PA3**](https://github.com/Brant-Skywalker/CS143/tree/master/PA3): Parsing
 - [ ] **[**PA4**](https://github.com/Brant-Skywalker/CS143/tree/master/PA4): Semantic Analysis**  :point_left:
 - [ ] [**PA5**](https://github.com/Brant-Skywalker/CS143/tree/master/PA5): Code Generation
 - [ ] ~~Extra Credit~~
