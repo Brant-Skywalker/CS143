@@ -183,6 +183,7 @@
     | CLASS TYPEID INHERITS TYPEID '{' feature_list '}' ';' {
         $$ = class_($2, $4, $6, stringtable.add_string(curr_filename));
     }
+    | error {}
     ;
 
     /* Feature list may be empty, but no empty features in list. */
@@ -198,6 +199,7 @@
     | OBJECTID '(' formal_list ')' ':' TYPEID '{' expr '}' {
         $$ = method($1, $3, $6, $8);
     }
+    | error {}
     ;
 
     assign:  /* empty */    { SET_NODELOC(0); $$ = no_expr(); }
@@ -264,6 +266,7 @@
     | expr_list expr ';' {
         $$ = append_Expressions($1, single_Expressions($2));
     }
+    | expr_list error ';'   {}
     ;
 
     let: OBJECTID ':' TYPEID assign IN expr %prec IN_PREC {
@@ -272,6 +275,8 @@
     | OBJECTID ':' TYPEID assign ',' let {
         $$ = let($1, $3, $4, $6);
     }
+    | error ',' let {}  // Skip to the next variable.
+    | error IN expr %prec IN_PREC {}  // Skip to the body.
     ;
 
     cases: case ';'     { $$ = single_Cases($1); }
