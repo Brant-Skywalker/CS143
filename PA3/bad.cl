@@ -9,6 +9,33 @@
 
 (* no error *)
 class A {
+    main(): Int {
+        {
+            4;
+            5;
+            6;
+            **;
+            7;
+            test(3, **, 
+            4, 6,
+            &&, 7, 7);
+        }
+    };
+};
+
+Class F {
+    b: String;
+    c;
+    d: Int;
+    e;
+
+    main(): Int {
+
+    let s <- 33, 
+    b : Int <- 3,
+    c <- "String" in 
+    5
+    };
 };
 
 (* error:  b is not a type identifier *)
