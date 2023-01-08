@@ -17,8 +17,8 @@ If you are required to write your own implementation without any unauthorized as
 
 - [x] [**PA1**](https://github.com/Brant-Skywalker/CS143/tree/master/PA1): COOL Overview
 - [x] [**PA2**](https://github.com/Brant-Skywalker/CS143/tree/master/PA2): Lexical Analysis
-- [ ] **[**PA3**](https://github.com/Brant-Skywalker/CS143/tree/master/PA3): Parsing**  :point_left:
-- [ ] [**PA4**](https://github.com/Brant-Skywalker/CS143/tree/master/PA4): Semantic Analysis
+- [x] PA3**](https://github.com/Brant-Skywalker/CS143/tree/master/PA3): Parsing
+- [ ] **[**PA4**](https://github.com/Brant-Skywalker/CS143/tree/master/PA4): Semantic Analysis**  :point_left:
 - [ ] [**PA5**](https://github.com/Brant-Skywalker/CS143/tree/master/PA5): Code Generation
 - [ ] ~~Extra Credit~~
 
@@ -29,3 +29,5 @@ If you are required to write your own implementation without any unauthorized as
 **December 28, 2022** - Done PA1.
 
 **December 30, 2022** - Done PA2.
+
+**January 7, 2023** - Done PA3.
